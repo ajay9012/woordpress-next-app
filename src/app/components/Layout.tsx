@@ -1,6 +1,7 @@
 import { ReactNode } from 'react';
 import Link from 'next/link';
 import Head from 'next/head';
+import MobileMenuToggle from './MobileMenuToggle';
 
 interface LayoutProps {
   children: ReactNode;
@@ -40,12 +41,7 @@ export default function Layout({ children, title = 'WordPress Next.js App' }: La
             
             {/* Mobile menu button */}
             <div className="md:hidden flex items-center">
-              <button className="mobile-menu-button outline-none">
-                <svg className="w-6 h-6 text-white" fill="none" strokeLinecap="round" 
-                    strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
-                  <path d="M4 6h16M4 12h16M4 18h16"></path>
-                </svg>
-              </button>
+              <MobileMenuToggle />
             </div>
           </div>
         </div>
